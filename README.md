@@ -13,8 +13,9 @@ that is installed.
 Then install OctoPrint in plugin development mode (this example assumes you've got a virtual env for OctoPrint development
 setup under `~/virtualenv/octodevel` and already checked out the OctoPrint sources under `~/devel/OctoPrint`):
 
+    ~/virtualenv/octodevel/activate
     cd ~/devel/OctoPrint
-    ~/virtualenv/octodevel/pip install .[plugins]
+    pip install .[plugins]
 
 This will also install Cookiecutter.
 
@@ -26,10 +27,10 @@ setuptools helpers it needs to import from your OctoPrint installation.
 ----
 
 You can then use Cookiecutter to create your new plugin's project folder (this example assumes we'll create it under 
-`~/devel/`):
+`~/devel/` and still have our virtual env activated):
 
     cd ~/devel/
-    ~/virtualenv/octodevel/cookiecutter gh:OctoPrint/cookiecutter-octoprint-plugin
+    cookiecutter gh:OctoPrint/cookiecutter-octoprint-plugin
 
 Cookiecutter will take care of cloning this repository and ask you a couple of questions to properly turn the template
 into your very own plugin project folder:
