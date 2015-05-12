@@ -1,0 +1,14 @@
+{
+  "repo_name": "OctoPrint-Skeleton",
+  "full_name": "You",
+  "email": "you@example.com",
+  "github_username": "you",
+  "plugin_name": "OctoPrint-Skeleton",
+  "plugin_identifier": "skeleton",
+  "plugin_version": "0.1",
+  "plugin_description": "TODO",
+  "plugin_homepage": "",
+  "plugin_source": "",
+  "plugin_installurl": "",
+  "plugin_license": "AGPLv3"
+}
