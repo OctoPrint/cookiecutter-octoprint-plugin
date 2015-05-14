@@ -10,26 +10,13 @@ plugin project folder out of thin air :)
 [Cookiecutter](https://github.com/audreyr/cookiecutter) depends on Python (just like OctoPrint). So first make sure
 that is installed.
 
-Then install OctoPrint in plugin development mode (this example assumes you've got a virtual env for OctoPrint development
-setup under `~/virtualenv/octodevel` and already checked out the OctoPrint sources under `~/devel/OctoPrint`):
+Then install Cookiecutter:
 
-    ~/virtualenv/octodevel/activate
-    cd ~/devel/OctoPrint
-    pip install .[plugins]
-
-This will also install Cookiecutter.
-
-----
-
-Note: Make sure you install OctoPrint fully, not in "edit mode", otherwise your plugin won't be able to find its 
-setuptools helpers it needs to import from your OctoPrint installation.
-
-----
+    pip install cookiecutter
 
 You can then use Cookiecutter to create your new plugin's project folder (this example assumes we'll create it under 
 `~/devel/` and still have our virtual env activated):
 
-    cd ~/devel/
     cookiecutter gh:OctoPrint/cookiecutter-octoprint-plugin
 
 Cookiecutter will take care of cloning this repository and ask you a couple of questions to properly turn the template
