@@ -28,26 +28,19 @@ into your very own plugin project folder:
     remote: Total 25 (delta 0), reused 25 (delta 0), pack-reused 0
     Unpacking objects: 100% (25/25), done.
     Checking connectivity... done.
+    plugin_name (default is "OctoPrint-Skeleton")?
     repo_name (default is "OctoPrint-Skeleton")?
     full_name (default is "You")?
     email (default is "you@example.com")?
     github_username (default is "you")?
-    plugin_name (default is "OctoPrint-Skeleton")?
     plugin_identifier (default is "skeleton")?
     plugin_version (default is "0.1")?
     plugin_description (default is "TODO")?
-    plugin_homepage (default is "")?
-    plugin_source (default is "")?
-    plugin_installurl (default is "")?
+    plugin_homepage (default is "https://github.com/you/OctoPrint-Skeleton")?
+    plugin_source (default is "https://github.com/you/OctoPrint-Skeleton")?
+    plugin_installurl (default is "https://github.com/you/OctoPrint-Skeleton/archive/master.zip")?
     plugin_license (default is "AGPLv3")?
 
-The template assumes the following default values if `plugin_homepage`, `plugin_source` and `plugin_installurl` are
-left empty:
-
-  * `plugin_homepage`: `https://github.com/<github_username>/<repo_name>`
-  * `plugin_source`: `https://github.com/<github_username>/<repo_name>`
-  * `plugin_source`: `https://github.com/<github_username>/<repo_name>/archive/master.zip`
-
-It will also generate a pre filled (well, as far as possible...) data file under `<repo_name>/extra/<plugin_identifier>.md`
+The template will also generate a pre filled (well, as far as possible...) data file under `<repo_name>/extras/<plugin_identifier>.md`
 you can complete after your plugin is ready for prime time (adding a proper description, a bunch of screenshots and
 a release date) to [publish your plugin on plugins.octoprint.org](http://plugins.octoprint.org/help/registering/).
