@@ -18,7 +18,7 @@ plugin_version = "{{cookiecutter.plugin_version}}"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = "{{cookiecutter.plugin_description}}"
+plugin_description = """{{cookiecutter.plugin_description}}"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
 plugin_author = "{{cookiecutter.full_name}}"
