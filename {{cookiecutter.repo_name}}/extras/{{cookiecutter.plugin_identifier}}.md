@@ -10,9 +10,13 @@ license: {{cookiecutter.plugin_license}}
 # TODO
 date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
 
-homepage: {% if cookiecutter.plugin_homepage %}{{cookiecutter.plugin_homepage}}{% else %}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}{% endif %}
-source: {% if cookiecutter.plugin_source %}{{cookiecutter.plugin_source}}{% else %}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}{% endif %}
-archive: {% if cookiecutter.plugin_installurl %}{{cookiecutter.installurl}}{% else %}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip{% endif %}
+homepage: {{cookiecutter.plugin_homepage}}
+source: {{cookiecutter.plugin_source}}
+archive: {{cookiecutter.plugin_installurl}}
+
+# TODO set this to true if your plugin uses the dependency_links setup parameter to include
+# library versions not yet published on PyPi. SHOULD ONLY BE USED IF THERE IS NO OTHER OPTION!
+follow_dependency_links: false
 
 # TODO
 tags:
@@ -48,4 +52,4 @@ compatibility:
 ---
 
 **TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-plugins.octoprint.org/plugin/{{cookiecutter.plugin_identifier}}/
+http://plugins.octoprint.org/plugin/{{cookiecutter.plugin_identifier}}/

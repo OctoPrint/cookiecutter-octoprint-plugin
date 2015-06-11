@@ -1,14 +1,15 @@
 {
-  "plugin_name": "OctoPrint-Skeleton",
+  "plugin_identifier": "skeleton",
+  "plugin_package": "octoprint_{{cookiecutter.plugin_identifier}}",
+  "plugin_name": "OctoPrint-{{cookiecutter.plugin_identifier | capitalize}}",
   "repo_name": "{{cookiecutter.plugin_name}}",
   "full_name": "You",
   "email": "you@example.com",
   "github_username": "you",
-  "plugin_identifier": "skeleton",
-  "plugin_version": "0.1",
+  "plugin_version": "0.1.0",
   "plugin_description": "TODO",
+  "plugin_license": "AGPLv3",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
-  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip",
-  "plugin_license": "AGPLv3"
+  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip"
 }

@@ -24,4 +24,7 @@ def __plugin_load__():
 	__plugin_implementation__ = {{ cookiecutter.plugin_identifier | capitalize }}Plugin()
 
 	# global __plugin_hooks__
-	# __plugin_hooks__ = {"some.octoprint.hook": __plugin_implementation__.some_hook_handler}
+	# __plugin_hooks__ = {
+	#    "some.octoprint.hook": __plugin_implementation__.some_hook_handler
+	# }
+
