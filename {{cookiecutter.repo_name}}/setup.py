@@ -43,8 +43,8 @@ plugin_requires = []
 # already be installed automatically if they exist.
 plugin_additional_data = []
 
-# Any additional python packages you need to install with your plugin that are not contains in <plugin_package>.*
-plugin_addtional_packages = []
+# Any additional python packages you need to install with your plugin that are not contained in <plugin_package>.*
+plugin_additional_packages = []
 
 # Any python packages within <plugin_package>.* you do NOT want to install with your plugin
 plugin_ignored_packages = []
@@ -82,7 +82,7 @@ setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
 	url=plugin_url,
 	license=plugin_license,
 	requires=plugin_requires,
-	additional_packages=plugin_addtional_packages,
+	additional_packages=plugin_additional_packages,
 	ignored_packages=plugin_ignored_packages,
 	additional_data=plugin_additional_data
 )
