@@ -1,2 +1,4 @@
 include README.md
-recursive-include {{cookiecutter.plugin_package}} *
+recursive-include {{cookiecutter.plugin_package}}/templates *
+recursive-include {{cookiecutter.plugin_package}}/translations *
+recursive-include {{cookiecutter.plugin_package}}/static *

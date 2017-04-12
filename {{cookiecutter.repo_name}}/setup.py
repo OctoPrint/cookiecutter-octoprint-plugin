@@ -40,7 +40,9 @@ plugin_requires = []
 ### --------------------------------------------------------------------------------------------------------------------
 
 # Additional package data to install for this plugin. The subfolders "templates", "static" and "translations" will
-# already be installed automatically if they exist.
+# already be installed automatically if they exist. Note that if you add something here you'll also need to update
+# MANIFEST.in to match to ensure that python setup.py sdist produces a source distribution that contains all your
+# files. This is sadly due to how python's setup.py works, see also http://stackoverflow.com/a/14159430/2028598
 plugin_additional_data = []
 
 # Any additional python packages you need to install with your plugin that are not contained in <plugin_package>.*
