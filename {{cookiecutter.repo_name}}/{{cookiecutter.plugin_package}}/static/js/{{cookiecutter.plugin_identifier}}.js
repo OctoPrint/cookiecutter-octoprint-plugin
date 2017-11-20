@@ -15,14 +15,15 @@ $(function() {
         // TODO: Implement your plugin's view model here.
     }
 
-    // view model class, parameters for constructor, container to bind to
-    OCTOPRINT_VIEWMODELS.push([
-        {{ cookiecutter.plugin_identifier | capitalize }}ViewModel,
-
-        // e.g. loginStateViewModel, settingsViewModel, ...
-        [ /* "loginStateViewModel", "settingsViewModel" */ ],
-
-        // e.g. #settings_plugin_{{ cookiecutter.plugin_identifier }}, #tab_plugin_{{ cookiecutter.plugin_identifier }}, ...
-        [ /* ... */ ]
-    ]);
+    /* view model class, parameters for constructor, container to bind to
+     * Please see http://docs.octoprint.org/en/master/plugins/viewmodels.html#registering-custom-viewmodels for more details
+     * and a full list of the available options.
+     */
+    OCTOPRINT_VIEWMODELS.push({
+        construct: {{ cookiecutter.plugin_identifier | capitalize }}ViewModel,
+        // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
+        dependencies: [ /* "loginStateViewModel", "settingsViewModel" */ ],
+        // Elements to bind to, e.g. #settings_plugin_{{ cookiecutter.plugin_identifier }}, #tab_plugin_{{ cookiecutter.plugin_identifier }}, ...
+        elements: [ /* ... */ ]
+    });
 });
