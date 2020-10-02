@@ -3,7 +3,7 @@
 ########################################################################################################################
 ### Do not forget to adjust the following variables to your own plugin.
 
-# The plugin's identifier, has to be unique
+# The plugin's identifier, should not contain " ", "-" or "_", has to be unique
 plugin_identifier = "{{cookiecutter.plugin_identifier}}"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
