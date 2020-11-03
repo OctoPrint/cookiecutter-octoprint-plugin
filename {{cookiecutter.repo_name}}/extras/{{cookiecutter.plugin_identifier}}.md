@@ -4,7 +4,8 @@ layout: plugin
 id: {{cookiecutter.plugin_identifier}}
 title: {{cookiecutter.plugin_name}}
 description: {{cookiecutter.plugin_description}}
-author: {{cookiecutter.full_name}}
+authors:
+- {{cookiecutter.full_name}}
 license: {{cookiecutter.plugin_license}}
 
 # TODO
@@ -82,16 +83,17 @@ compatibility:
   - windows
   - macos
   - freebsd
-  
+
   # Compatible Python version
   #
   # Plugins should aim for compatibility for Python 2 and 3 for now, in which case the value should be ">=2.7,<4".
   #
-  # Plugins that only wish to support Python 3 should set it to ">=3,<4". 
+  # Plugins that only wish to support Python 3 should set it to ">=3,<4".
   #
   # If your plugin only supports Python 2 (worst case, not recommended for newly developed plugins since Python 2
-  # is EOL), leave at ">=2.7,<3"
-  
+  # is EOL), leave at ">=2.7,<3" - be aware that your plugin will not be allowed to register on the
+  # plugin repository if it only support Python 2.
+
   python: ">=2.7,<3"
 
 ---
