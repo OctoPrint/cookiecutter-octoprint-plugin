@@ -12,48 +12,49 @@ from __future__ import absolute_import
 import octoprint.plugin
 
 class {{ cookiecutter.plugin_identifier | capitalize }}Plugin(octoprint.plugin.SettingsPlugin,
-      {{ " " * cookiecutter.plugin_identifier | length }}       octoprint.plugin.AssetPlugin,
-      {{ " " * cookiecutter.plugin_identifier | length }}       octoprint.plugin.TemplatePlugin):
+    octoprint.plugin.AssetPlugin,
+    octoprint.plugin.TemplatePlugin
+):
 
-	##~~ SettingsPlugin mixin
+    ##~~ SettingsPlugin mixin
 
-	def get_settings_defaults(self):
-		return dict(
-			# put your plugin's default settings here
-		)
+    def get_settings_defaults(self):
+        return {
+            # put your plugin's default settings here
+        }
 
-	##~~ AssetPlugin mixin
+    ##~~ AssetPlugin mixin
 
-	def get_assets(self):
-		# Define your plugin's asset files to automatically include in the
-		# core UI here.
-		return dict(
-			js=["js/{{ cookiecutter.plugin_identifier }}.js"],
-			css=["css/{{ cookiecutter.plugin_identifier }}.css"],
-			less=["less/{{ cookiecutter.plugin_identifier }}.less"]
-		)
+    def get_assets(self):
+        # Define your plugin's asset files to automatically include in the
+        # core UI here.
+        return {
+            "js": ["js/{{ cookiecutter.plugin_identifier }}.js"],
+            "css": ["css/{{ cookiecutter.plugin_identifier }}.css"],
+            "less": ["less/{{ cookiecutter.plugin_identifier }}.less"]
+        }
 
-	##~~ Softwareupdate hook
+    ##~~ Softwareupdate hook
 
-	def get_update_information(self):
-		# Define the configuration for your plugin to use with the Software Update
-		# Plugin here. See https://docs.octoprint.org/en/master/bundledplugins/softwareupdate.html
-		# for details.
-		return dict(
-			{{ cookiecutter.plugin_identifier }}=dict(
-				displayName="{{ cookiecutter.plugin_identifier | capitalize }} Plugin",
-				displayVersion=self._plugin_version,
+    def get_update_information(self):
+        # Define the configuration for your plugin to use with the Software Update
+        # Plugin here. See https://docs.octoprint.org/en/master/bundledplugins/softwareupdate.html
+        # for details.
+        return {
+            "{{ cookiecutter.plugin_identifier }}": {
+                "displayName": "{{ cookiecutter.plugin_identifier | capitalize }} Plugin",
+                "displayVersion": self._plugin_version,
 
-				# version check: github repository
-				type="github_release",
-				user="{{cookiecutter.github_username}}",
-				repo="{{cookiecutter.repo_name}}",
-				current=self._plugin_version,
+                # version check: github repository
+                "type": "github_release",
+                "user": "{{cookiecutter.github_username}}",
+                "repo": "{{cookiecutter.repo_name}}",
+                "current": self._plugin_version,
 
-				# update method: pip
-				pip="https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/{target_version}.zip"
-			)
-		)
+                # update method: pip
+                "pip": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/{target_version}.zip",
+            }
+        }
 
 
 # If you want your plugin to be registered within OctoPrint under a different name than what you defined in setup.py
@@ -69,11 +70,10 @@ __plugin_name__ = "{{ cookiecutter.plugin_identifier | capitalize }} Plugin"
 #__plugin_pythoncompat__ = ">=2.7,<4" # python 2 and 3
 
 def __plugin_load__():
-	global __plugin_implementation__
-	__plugin_implementation__ = {{ cookiecutter.plugin_identifier | capitalize }}Plugin()
+    global __plugin_implementation__
+    __plugin_implementation__ = {{ cookiecutter.plugin_identifier | capitalize }}Plugin()
 
-	global __plugin_hooks__
-	__plugin_hooks__ = {
-		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
-	}
-
+    global __plugin_hooks__
+    __plugin_hooks__ = {
+        "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+    }
