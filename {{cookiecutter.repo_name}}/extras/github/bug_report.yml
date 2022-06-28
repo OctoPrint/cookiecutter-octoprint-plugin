@@ -9,7 +9,7 @@ body:
           * First, be sure you are running the [latest version of the {{cookiecutter.plugin_name}} plugin](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/releases).
           * You will also need to [enable debugging on the plugin](https://docs.octoprint.org/en/master/configuration/logging_yaml.html).
             * This may be done through the *Settings* > *OctoPrint* > *Logging* > *Logging Levels* section.
-            * Select the "octoprint.plugins.{{cookiecutter.plugin_identifier}}" Name, and make sure Level is "DEBUG".
+            * Select the "octoprint.plugins.{{cookiecutter.plugin_identifier}}" name, and make sure Level is "DEBUG".
             * Save, then restart OctoPrint, which allows the developers to see debug information from the moment the plugin is loaded.
           * Finally, when submitting a bug report, you **must** [include a Systeminfo Bundle](https://community.octoprint.org/t/what-is-a-systeminfo-bundle-and-how-can-i-obtain-one/29887), generated after the point the bug occurs. This allows the developers to examine the debug logs produced from your plugin installation.
 
