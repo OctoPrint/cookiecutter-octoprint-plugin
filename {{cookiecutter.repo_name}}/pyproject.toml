@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=67", "wheel"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,11 +9,10 @@ description = "{{cookiecutter.plugin_description}}"
 authors = [
     {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}
 ]
-maintainers = [
-    {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}
-]
 readme = {file = "README.md", content-type = "markdown"}
-license = "{{cookiecutter.plugin_license}}"
+dynamic = [
+    "license"
+]
 
 requires-python = ">=3.7, <4"
 
@@ -22,7 +21,12 @@ dependencies = []
 
 [tool.setuptools]
 include-package-data = true
-packages = ["{{cookiecutter.plugin_package}}"]
+
+[tool.setuptools.packages.find]
+include = [
+    "{{cookiecutter.plugin_package}}",
+    "{{cookiecutter.plugin_package}}.*"
+]
 
 [project.entry-points."octoprint.plugin"]
 {{cookiecutter.plugin_identifier}} = "{{cookiecutter.plugin_package}}"
