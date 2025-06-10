@@ -93,7 +93,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.isort]
 known-first-party = [
-    "{{cookiecutter.plugin_package}}",
+    "octoprint_file_check",
 ]
 
 [tool.ruff.format]
