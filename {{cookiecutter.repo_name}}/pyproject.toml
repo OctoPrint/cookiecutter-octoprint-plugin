@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.plugin_name}}"
+version = "{{cookiecutter.plugin_version}}"
+description = "{{cookiecutter.plugin_description}}"
+authors = [
+    {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}
+]
+readme = {file = "README.md", content-type = "markdown"}
+dynamic = [
+    "license"
+]
+
+requires-python = ">=3.7, <4"
+
+# any additional requirements (besides OctoPrint) should be listed here
+dependencies = []
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = [
+    "{{cookiecutter.plugin_package}}",
+    "{{cookiecutter.plugin_package}}.*"
+]
+
+[project.entry-points."octoprint.plugin"]
+{{cookiecutter.plugin_identifier}} = "{{cookiecutter.plugin_package}}"
+
+[project.urls]
+Homepage = "{% if cookiecutter.plugin_homepage %}{{cookiecutter.plugin_homepage}}{% else %}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}{% endif %}"
+
+[project.optional-dependencies]
+develop = [
+    "go-task-bin"
+]

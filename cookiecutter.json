@@ -8,7 +8,7 @@
   "github_username": "you",
   "plugin_version": "0.1.0",
   "plugin_description": "TODO",
-  "plugin_license": "AGPLv3",
+  "plugin_license": "AGPL-3.0-or-later",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip"
