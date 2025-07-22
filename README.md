@@ -1,3 +1,6 @@
+> [!NOTE]
+> Instead of using this Cookiecutter template directly, you should rather use it through `octoprint dev plugin:new`
+
 # Cookiecutter Template for OctoPrint Plugins
 
 This is a template for use with [Cookiecutter](https://github.com/audreyr/cookiecutter) to quickly create an 
@@ -10,9 +13,9 @@ This is a template for use with [Cookiecutter](https://github.com/audreyr/cookie
 [Cookiecutter](https://github.com/audreyr/cookiecutter) depends on Python (just like OctoPrint). So first make sure
 that is installed.
 
-Then install Cookiecutter:
+Then install the required dependencies:
 
-    pip install cookiecutter
+    pip install cookiecutter packaging
 
 You can then use Cookiecutter to create your new plugin's project folder (this example assumes we'll create it under 
 `~/devel/`):
