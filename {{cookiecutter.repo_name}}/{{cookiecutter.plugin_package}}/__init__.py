@@ -38,7 +38,7 @@ class {{ cookiecutter.plugin_identifier | capitalize }}Plugin(octoprint.plugin.S
 
     def get_update_information(self):
         # Define the configuration for your plugin to use with the Software Update
-        # Plugin here. See https://docs.octoprint.org/en/master/bundledplugins/softwareupdate.html
+        # Plugin here. See https://docs.octoprint.org/en/main/bundledplugins/softwareupdate.html
         # for details.
         return {
             "{{ cookiecutter.plugin_identifier }}": {

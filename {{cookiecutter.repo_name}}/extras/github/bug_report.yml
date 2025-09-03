@@ -7,7 +7,7 @@ body:
         **Thank you for wanting to report a bug in {{cookiecutter.plugin_name}}!**
 
           * First, be sure you are running the [latest version of the {{cookiecutter.plugin_name}} plugin](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/releases).
-          * You will also need to [enable debugging on the plugin](https://docs.octoprint.org/en/master/configuration/logging_yaml.html).
+          * You will also need to [enable debugging on the plugin](https://docs.octoprint.org/en/main/configuration/logging_yaml.html).
             * This may be done through the *Settings* > *OctoPrint* > *Logging* > *Logging Levels* section.
             * Select the "octoprint.plugins.{{cookiecutter.plugin_identifier}}" name, and make sure Level is "DEBUG".
             * Save, then restart OctoPrint, which allows the developers to see debug information from the moment the plugin is loaded.
