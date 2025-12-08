@@ -11,5 +11,5 @@
   "plugin_license": "AGPL-3.0-or-later",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
-  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip"
+  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/main.zip"
 }
